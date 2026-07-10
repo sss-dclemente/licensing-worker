@@ -12,7 +12,7 @@ compatibility_date = "2026-07-01"
 binding = "DB"
 database_name = "licensing"
 # Replace with the id printed by `wrangler d1 create licensing`.
-database_id = "REPLACE_ME"
+database_id = "95f21556-f908-4b98-90b5-33f6e39a92ec"
 
 [vars]
 # Nothing sensitive goes here. Secrets are set via `wrangler secret put`.
