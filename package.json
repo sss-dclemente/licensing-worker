@@ -1,0 +1,19 @@
+{
+  "name": "licensing-worker",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "test": "vitest run",
+    "deploy": "wrangler deploy",
+    "migrate": "wrangler d1 migrations apply licensing --remote"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.18.4",
+    "@cloudflare/workers-types": "^5.20260708.1",
+    "typescript": "^5.8.0",
+    "vitest": "^4.1.0",
+    "wrangler": "^4.110.0"
+  }
+}

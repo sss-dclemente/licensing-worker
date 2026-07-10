@@ -1,0 +1,18 @@
+# licensing-worker — license validation service on Cloudflare Workers + D1.
+#
+# Secrets (set manually, never committed):
+#   wrangler secret put PADDLE_WEBHOOK_SECRET
+#   wrangler secret put RESEND_API_KEY
+
+name = "licensing-worker"
+main = "src/index.ts"
+compatibility_date = "2026-07-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "licensing"
+# Replace with the id printed by `wrangler d1 create licensing`.
+database_id = "REPLACE_ME"
+
+[vars]
+# Nothing sensitive goes here. Secrets are set via `wrangler secret put`.
