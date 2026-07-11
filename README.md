@@ -1,8 +1,15 @@
 # licensing-worker
 
-License validation service for SimpleSmoothSafe products (e.g. `dvops` /
-dataverse-ops-mcp). Issues license keys on Paddle subscription events and
-answers "is this key valid?" for the products' `LICENSE_KEY` checks.
+> **Status: standalone reference project.** This was built to license
+> dataverse-ops-mcp, which is now free and MIT-licensed with no paywall — so
+> this worker no longer gates that product. It's kept as a self-contained
+> example of a minimal license service on Cloudflare Workers + D1 (Paddle
+> webhook signature verification, idempotent event handling, D1 schema/migrations,
+> and vitest against the Workers pool). MIT-licensed; reuse it freely.
+
+A minimal license validation service on Cloudflare Workers + D1. Issues license
+keys on Paddle subscription events and answers "is this key valid?" over a small
+HTTP API.
 
 ## Architecture
 
